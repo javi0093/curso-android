@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvContacto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margen_activity"
+    card_view:cardCornerRadius="16dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/margen_activity">
+
+
+        <ImageView
+            android:id="@+id/imgFoto"
+            android:layout_width="@dimen/tamaño_foto"
+            android:layout_height="@dimen/tamaño_foto"
+            tools:srcCompat="@tools:sample/avatars"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"/>
+        <RelativeLayout
+            android:id="@+id/rlDatos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/left">
+
+
+            <ImageButton
+                android:id="@+id/imgbtnLikeBlancoCV"
+                android:layout_width="@dimen/like"
+                android:layout_height="@dimen/like"
+                android:background="@drawable/hueso"
+                />
+            <TextView
+                android:id="@+id/tvNombreCV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pnombre"
+                android:textSize="@dimen/nombre_mascota"
+                android:gravity="center"
+                android:paddingLeft="@dimen/left"
+                android:layout_toEndOf="@id/imgbtnLikeBlancoCV"
+                />
+
+
+            <ImageView
+                android:id="@+id/ivLikes"
+                android:layout_width="@dimen/like"
+                android:layout_height="@dimen/like"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/hueso_amarillo"/>
+            <TextView
+                android:id="@+id/tvLikesCV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/plikes1"
+                android:layout_toLeftOf="@id/ivLikes"
+                android:textSize="@dimen/nombre_mascota"/>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

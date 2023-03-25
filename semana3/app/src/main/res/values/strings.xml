@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Petagram3.0</string>
+    <string name="pnombre">nombre</string>
+    <string name="ptelefono">telefono</string>
+    <string name="plikes1">likes</string>
+    <string name="plikes4">likes</string>
+    <string name="plikes5">likes</string>
+    <string name="plikes3">likes</string>
+    <string name="plikes2">likes</string>
+</resources>
