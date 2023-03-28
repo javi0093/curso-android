@@ -1,5 +1,6 @@
 package com.example.petagram30;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -8,8 +9,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.ContextMenu;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -18,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     ArrayList<Mascota> arrayListMascotas;
     private RecyclerView listaMascotas;
-    private static ImageButton imgbtnTopCinco;
+
 
     private Mascota[] top;
     @Override
@@ -38,23 +44,7 @@ public class MainActivity extends AppCompatActivity {
         listaMascotas.setLayoutManager(llm);
         inicializarListaMascotas();
         inicializarAdaptador();
-        imgbtnTopCinco = (ImageButton) findViewById(R.id.imgbtnTopCinco);
 
-        imgbtnTopCinco.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //Toast.makeText(MainActivity.this, "prueba", Toast.LENGTH_SHORT).show();
-
-                Intent intent = new Intent(MainActivity.this, top5.class);
-                intent.putExtra(getResources().getString(R.string.plikes1),arrayListMascotas.get(0).getLikes());
-                intent.putExtra(getResources().getString(R.string.plikes2),arrayListMascotas.get(1).getLikes());
-                intent.putExtra(getResources().getString(R.string.plikes3),arrayListMascotas.get(2).getLikes());
-                intent.putExtra(getResources().getString(R.string.plikes4),arrayListMascotas.get(3).getLikes());
-                intent.putExtra(getResources().getString(R.string.plikes5),arrayListMascotas.get(4).getLikes());
-
-                startActivity(intent);
-            }
-        });
     }
 
 
@@ -70,6 +60,37 @@ public class MainActivity extends AppCompatActivity {
         arrayListMascotas.add(new Mascota("marco aurelio", R.drawable.perro5, 1));
        // arrayListMascotas.add(new Mascota("maría luisa", R.drawable.g4657_4, 8));
         arrayListMascotas.add(new Mascota("carlos fernando", R.drawable.perro3, 3));
-
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_opciones, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        switch (item.getItemId()){
+            case R.id.mAbout:
+                Intent intent = new Intent(this, ActivityAbout.class);
+                startActivity(intent);
+                break;
+            case R.id.msettings:
+                Intent intent2 = new Intent(this, ActivitySettings.class);
+                startActivity(intent2);
+                break;
+            case R.id.mUltimos5:
+
+                Intent intent3 = new Intent(MainActivity.this, top5.class);
+                startActivity(intent3);
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+
+
+
 }

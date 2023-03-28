@@ -1,11 +1,15 @@
 package com.example.petagram30;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import java.util.ArrayList;
 
@@ -24,12 +28,9 @@ public class top5 extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        Bundle parametros   = getIntent().getExtras();
-        String likes1 = parametros.getString(getResources().getString(R.string.plikes1));
-        String likes2 = parametros.getString(getResources().getString(R.string.plikes2));
-        String likes3 = parametros.getString(getResources().getString(R.string.plikes3));
-        String likes4 = parametros.getString(getResources().getString(R.string.plikes4));
-        String likes5 = parametros.getString(getResources().getString(R.string.plikes5));
+        /*Bundle parametros   = getIntent().getExtras();
+        String likes1 = parametros.getString(getResources().getString(R.string.plikes));*/
+
 
 
         listaMascotas = (RecyclerView) findViewById(R.id.rv5Mascotas);
@@ -58,5 +59,28 @@ public class top5 extends AppCompatActivity {
         arrayListMascotas.add(new Mascota("luis enrrique", R.drawable.perro4, 2));
         arrayListMascotas.add(new Mascota("marco aurelio", R.drawable.perro5, 1));
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_opciones, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        switch (item.getItemId()){
+            case R.id.mAbout:
+                Intent intent = new Intent(this, ActivityAbout.class);
+                startActivity(intent);
+                break;
+            case R.id.msettings:
+                Intent intent2 = new Intent(this, ActivitySettings.class);
+                startActivity(intent2);
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

@@ -60,7 +60,7 @@
                 android:id="@+id/tvLikesCV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/plikes1"
+                android:text="@string/plikes"
                 android:layout_toLeftOf="@id/ivLikes"
                 android:textSize="@dimen/nombre_mascota"/>
 

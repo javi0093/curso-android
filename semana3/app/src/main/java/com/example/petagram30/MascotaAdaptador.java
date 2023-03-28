@@ -2,6 +2,7 @@ package com.example.petagram30;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
@@ -62,6 +63,7 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
             }
         });
 
+
     }
 
     @Override
@@ -75,7 +77,7 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
         private TextView tvNombreCV;
         private TextView tvLikesCV;
         private static ImageButton imgbtnLikeBlancoCV;
-        //private static ImageButton imgbtnTopCinco;
+
 
         public MascotaViewHolder(View itemView) {
             super(itemView);
@@ -83,7 +85,9 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
             tvNombreCV   = (TextView) itemView.findViewById(R.id.tvNombreCV);
             tvLikesCV = (TextView) itemView.findViewById(R.id.tvLikesCV);
             imgbtnLikeBlancoCV = (ImageButton) itemView.findViewById(R.id.imgbtnLikeBlancoCV);
-            //imgbtnTopCinco = (ImageButton) itemView.findViewById(R.id.imgbtnTopCinco);
+
         }
     }
+
+
 }
