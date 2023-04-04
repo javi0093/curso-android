@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/alto_cardview_detalle_mimascota"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/margen_activity"
+    android:layout_margin="@dimen/margen_cardview_mi_mascota"
+    app:cardCornerRadius="@dimen/margen_cardview_mi_mascota">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margen_activity">
+
+
+        <ImageView
+            android:id="@+id/imgFotoMimascota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:srcCompat="@tools:sample/avatars"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"/>
+        <RelativeLayout
+            android:id="@+id/rlDatos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/left"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ivLikesFotoMiMascota"
+                android:layout_width="@dimen/like"
+                android:layout_height="@dimen/like"
+                android:layout_toEndOf="@+id/tvLikesCVFotoMiMascota"
+                android:background="@drawable/hueso_amarillo"/>
+            <TextView
+                android:id="@+id/tvLikesCVFotoMiMascota"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/plikes"
+
+                android:textSize="@dimen/nombre_mascota"/>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
