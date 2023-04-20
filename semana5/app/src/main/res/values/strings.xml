@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Petagram</string>
+    <string name="pnombre">Nombre</string>
+    <string name="ptelefono">Telefono</string>
+    <string name="plikes">Likes</string>
+    <string name="pcorreo">Correo Electrónico</string>
+    <string name="pmensaje">Ingrese su mensaje</string>
+    <string name="menu_contacto">Contacto</string>
+    <string name="menu_acerca_de">Acerca de</string>
+    <string name="menu_editar">editar</string>
+    <string name="menu_eliminar">eliminar</string>
+    <string name="texto_settings">Settings</string>
+    <string name="action_view">Action View</string>
+    <string name="boton_enviar_comentario">Enviar comentario</string>
+    <string name="titulo_about">Bio del Desarrollador:</string>
+    <string name="ultimos_cinco">Tus últimos 5 likes</string>
+
+
+    <string name="texto_about">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</string>
+
+
+</resources>

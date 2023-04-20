@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityAbout">
+    <include android:id="@+id/miToolBar"
+        layout="@layout/toolbar2"></include>
+    <TextView
+        android:id="@+id/tvTituloAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margen_activity"
+        android:textSize="@dimen/nombre_cardview"
+        android:layout_centerHorizontal="true"
+        android:text="@string/titulo_about"
+        android:layout_below="@id/miToolBar"/>
+    <TextView
+        android:id="@+id/tvTextoAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margen_activity"
+        android:padding="@dimen/margen_activity"
+        android:textSize="@dimen/nombre_mascota"
+        android:layout_centerHorizontal="true"
+        android:text="@string/texto_about"
+        android:layout_below="@id/tvTituloAbout"/>
+</RelativeLayout>

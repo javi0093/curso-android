@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.DetalleMascotaFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:layout_width="@dimen/tamaño_foto"
+            android:layout_height="@dimen/tamaño_foto"
+            android:id="@+id/cvFotoMiMascota"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/perro4"
+            android:layout_marginTop="@dimen/margen_activity"
+            app:civ_circle_color="@color/teal_100"
+            app:civ_border_color="@color/celeste_dark_nigth"
+            app:civ_border_width="4dp"
+            app:civ_shadow="true"
+            app:civ_shadow_radius="2dp"
+            app:civ_shadow_color="@color/celeste_primary_nigth"
+            />
+
+        <TextView
+            android:layout_marginTop="@dimen/margen_activity"
+            android:id="@+id/tvNombreMiMascota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ronny"
+            android:textSize="@dimen/nombre_cardview"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/cvFotoMiMascota"
+            />
+
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            android:layout_below="@id/tvNombreMiMascota"
+            android:layout_marginLeft="@dimen/margen_activity"
+            android:layout_marginRight="@dimen/margen_activity"
+            android:layout_marginTop="@dimen/left"
+            android:layout_marginBottom="@dimen/left"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMiMascota"
+            android:layout_marginTop="@dimen/margen_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/divider"/>
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>

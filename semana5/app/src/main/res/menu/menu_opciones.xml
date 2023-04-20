@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="@string/menu_contacto"
+        android:id="@+id/mContacto"
+        android:orderInCategory="100"
+        >
+
+    </item>
+    <item
+        android:orderInCategory="101"
+        android:title="@string/menu_acerca_de"
+        android:id="@+id/mAbout"
+        >
+    </item>
+    <item
+        android:id="@+id/mUltimos5"
+        android:title="@string/action_view"
+        android:orderInCategory="102"
+        app:showAsAction="always"
+        android:icon="@drawable/icons8_5_star_hotel_100"/>
+</menu>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityContacto">
+
+    <include android:id="@+id/miToolBar"
+        layout="@layout/toolbar2"></include>
+
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/miToolBar"
+        android:layout_marginStart="@dimen/margen_activity"
+        android:layout_marginTop="@dimen/margen_activity"
+        android:layout_marginEnd="@dimen/margen_activity"
+        android:layout_marginBottom="@dimen/margen_activity"
+        android:hint="@string/pnombre"
+        android:paddingLeft="@dimen/margen_activity" />
+
+    <EditText
+        android:id="@+id/etCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etNombre"
+        android:layout_marginStart="@dimen/margen_activity"
+        android:layout_marginTop="@dimen/margen_activity"
+        android:layout_marginEnd="@dimen/margen_activity"
+        android:layout_marginBottom="@dimen/margen_activity"
+        android:hint="@string/pcorreo"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="@dimen/margen_activity" />
+
+    <EditText
+        android:id="@+id/etMensaje"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/alto_edittext_mensaje"
+        android:layout_below="@id/etCorreo"
+        android:layout_marginStart="@dimen/margen_activity"
+        android:layout_marginTop="@dimen/margen_activity"
+        android:layout_marginEnd="@dimen/margen_activity"
+        android:layout_marginBottom="@dimen/margen_activity"
+        android:gravity="bottom"
+        android:hint="@string/pmensaje"
+        android:paddingLeft="@dimen/margen_activity" />
+
+    <Button
+        android:id="@+id/btnEnviarComentario"
+        android:layout_marginBottom="150dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:text="@string/boton_enviar_comentario"
+        android:backgroundTint="@android:color/holo_blue_light"
+        />
+</RelativeLayout>
